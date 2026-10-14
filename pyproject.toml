@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trustelis-responsible-ai-kit"
+version = "0.1.0"
+description = "Offline-first modular Responsible AI preflight factors and control cards for AI developers"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+authors = [{name = "TRUSTELIS LTD"}]
+classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11", "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13", "License :: OSI Approved :: Apache Software License"]
+
+[project.scripts]
+trustelis-rai = "trustelis_rai.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

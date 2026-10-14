@@ -1,0 +1,7 @@
+{
+  "use_case_id": "customer-refund-agent",
+  "action": "refund.create",
+  "actor": {"id": "synthetic-staff-8", "role": "support_agent", "tenant_id": "demo-company-a", "active": true},
+  "target": {"id": "synthetic-refund-22", "tenant_id": "demo-company-b", "classification": "internal"},
+  "parameters": {"amount_usd": 20}
+}

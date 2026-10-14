@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this public developer reference kit in research, please cite it."
+title: "TRUSTELIS Responsible AI Kit"
+type: software
+authors:
+  - name: "TRUSTELIS LTD"
+version: "0.1.0"
+license: Apache-2.0
