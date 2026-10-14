@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "use_case": {"id": "customer-refund-agent", "name": "Customer Refund Agent", "industry": "Retail"},
+  "factors": {
+    "authorization": {
+      "enabled": true,
+      "tenant_isolation": true,
+      "allowed_actions_by_role": {
+        "support_agent": ["refund.read", "refund.create"],
+        "manager": ["refund.read", "refund.create", "refund.review"]
+      },
+      "deny_actions": ["customer.delete", "secrets.export", "wire.execute"]
+    },
+    "action_limits": {"enabled": true, "maximum_amounts_usd": {"refund.create": 100}},
+    "data_handling": {"enabled": true, "deny_classifications": ["restricted", "secret"], "require_classification": true},
+    "human_oversight": {"enabled": true, "approval_required_actions": [], "approval_thresholds_usd": {"refund.create": 50}},
+    "evidence": {"enabled": true},
+    "fairness": {"enabled": true, "review_note": "Requires suitable outcome and demographic evaluation data"},
+    "regulatory_context": {"enabled": true, "review_note": "Human review required to establish applicable obligations"},
+    "transparency": {"enabled": true, "review_note": "Human review of notices and explanation quality"},
+    "organizational_readiness": {"enabled": true, "review_note": "Organizational readiness cannot be inferred from a developer request"}
+  }
+}
